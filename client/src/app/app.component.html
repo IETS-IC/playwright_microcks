@@ -1,0 +1,41 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav #drawer mode="side" position="end">
+        <!-- Navigation menu -->
+        <ng-container *ngFor="let nav of navigation">
+            <button mat-button class="menu-button" [routerLink]="nav.routerLink">
+                <span>{{nav.title}}</span>
+            </button>
+            <mat-divider></mat-divider>
+        </ng-container>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="split-layout" fxLayout="row" fxLayoutAlign="center stretch">
+            <!-- Left side: display results -->
+            <div class="split-left">
+                <div class="website-title toolbar mat-toolbar mat-toolbar-single-row">
+                    <span class="website-title-1">Playwright & Microcks&nbsp;&nbsp;</span><span
+                        class="website-title-2">proof of
+                        concepts</span>
+                </div>
+                <div class="split-content">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="container" [innerHTML]="display.result">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side: router ouitlet -->
+            <div class="split-right">
+                <mat-toolbar class="toolbar">
+                    <span class="flexExpand"></span>
+                    <button mat-icon-button aria-label="Click to open menu" (click)="drawer.toggle()">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </mat-toolbar>
+                <div class="split-content">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

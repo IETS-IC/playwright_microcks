@@ -1,0 +1,29 @@
+<form [formGroup]="formData" class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput formControlName="comment"></textarea>
+    </mat-form-field>
+</form>
+
+<mat-expansion-panel hideToggle class="footer">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Form Status
+        </mat-panel-title>
+        <mat-panel-description>
+            Angular value for reactive forms
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p><b>status : </b>{{formData.status}}</p>
+    <p><b>valid : </b>{{formData.valid}}</p>
+    <p><b>invalid : </b>{{formData.invalid}}</p>
+    <p><b>touched : </b>{{formData.touched}}</p>
+    <p><b>untouched : </b>{{formData.untouched}}</p>
+    <p><b>pristine : </b>{{formData.pristine}}</p>
+    <p><b>dirty : </b>{{formData.dirty}}</p>
+    <p><b>disabled : </b>{{formData.disabled}}</p>
+    <p><b>enabled : </b>{{formData.enabled}}</p>
+
+    <h3>Form Value</h3>
+    <p>{{formData.value |json}}</p>
+</mat-expansion-panel>

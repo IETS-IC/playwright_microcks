@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ca</groupId>
+    <artifactId>icpb</artifactId>
+    <version>0.0.1</version>
+    <name>Playwright Microcks POC</name>
+    <packaging>pom</packaging>
+    <description>Playwright Microcks POC description</description>
+
+    <scm>
+        <url>https://github.com/IETS-IC/playwright_microcks.git</url>
+    </scm>	
+    <!-- variables -->
+    <!-- contains props for submodules as well -->
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
+    <!-- environment controls -->
+    <profiles>
+        <profile>
+            <!-- Add local runtime properties -->
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <project.version.suffix>-SNAPSHOT</project.version.suffix>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <project.version.suffix>-RELEASE</project.version.suffix>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!-- submodules -->
+    <modules>
+        <module>database</module>
+        <module>frontend</module>
+        <module>backend</module>
+    </modules>
+</project>
