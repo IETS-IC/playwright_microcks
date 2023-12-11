@@ -34,19 +34,9 @@ public class PostalCodeValidationResource {
 
 
     private String validationGuidance() {
-        return "Please provide a postal code and a provice as separate URI params";
+        return "Please provide a postal code and a provice as separate URI params (Postal Code / Province Code)";
     }
 
-    /*
-    @GET
-    @Path("/validation/{postalCode}/{province}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String validate(@PathParam("postalCode") String postalCode, @PathParam("province") String province) {
-        return String.format("Example response with URI param values (%s, %s)", postalCode, province);
-    }
-    */
-
-    ///*
     @GET
     @Path("/validation/{postalCode}/{provinceCode}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -54,6 +44,5 @@ public class PostalCodeValidationResource {
         PostalCode postalCodeValidation = new PostalCode(postalCode, provinceCode);
         return postalCodeValidation.validate("-1");
     }
-    //*/
     
 }
