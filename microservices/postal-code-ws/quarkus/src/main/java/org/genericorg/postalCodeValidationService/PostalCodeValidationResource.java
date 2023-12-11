@@ -44,5 +44,5 @@ public class PostalCodeValidationResource {
         PostalCode postalCodeValidation = new PostalCode(postalCode, provinceCode);
         return postalCodeValidation.validate("-1");
     }
-    
+
 }

@@ -25,16 +25,6 @@ public class CreditCardValidationResource {
         return "Please provide a credit card number as a URI param";
     }
 
-    /*
-    @GET
-    @Path("/validation/{creditCardNumber}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String validate(@PathParam("creditCardNumber") String creditCardNumber) {
-        return String.format("Example response with a URI param value (%s)", creditCardNumber);
-    }
-    */
-
-    ///*
     @GET
     @Path("/validation/{creditCardNumber}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -42,6 +32,5 @@ public class CreditCardValidationResource {
         CreditCard creditCard = new CreditCard(creditCardNumber);
         return creditCard.validate();
     }
-    //*/
 
 }
