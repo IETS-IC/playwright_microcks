@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PostalCodeComponent } from './postal-code.component';
+
+describe('PostalCodeComponent', () => {
+  let component: PostalCodeComponent;
+  let fixture: ComponentFixture<PostalCodeComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [PostalCodeComponent]
+    });
+    fixture = TestBed.createComponent(PostalCodeComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
