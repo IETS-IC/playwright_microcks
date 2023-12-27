@@ -1,13 +1,32 @@
 <h2>POSTAL CODE VALIDATION</h2>
 
-<button (click)="pingService()">TEST GREETING</button>
-<br />
-<button (click)="requestRootInstructions()">TEST SERVICE ROOT</button>
-<br />
-<form [formGroup]="validationForm" (ngSubmit)="validatePostalCode()" autocomplete="off">
-    <div class="flex-column">
-        <input formControlName="postalCode" autocorrect="off" autocomplete="off" autocapitalize="off" />
-        <input formControlName="provinceCode" autocorrect="off" autocomplete="off" autocapitalize="off" />
-        <button type="submit">TEST VALIDATION</button>
-    </div>
-</form>
+<div class="api-test-div">
+    <button mat-raised-button (click)="pingService()" class="test-buttons">TEST GREETING</button>
+    <button mat-raised-button (click)="requestRootInstructions()" class="test-buttons">TEST SERVICE ROOT</button>
+    <form [formGroup]="validationForm" (ngSubmit)="validatePostalCode()" autocomplete="off" class="postal-form">
+        <mat-form-field>
+            <mat-label>Postal Code</mat-label>
+            <input matInput formControlName="postalCode" placeholder="Ex. A1A 1A1" autocorrect="off" autocomplete="off"
+                autocapitalize="off" class="postal-input" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Province / Territories</mat-label>
+            <select matNativeControl formControlName="provinceCode">
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="YT">Yukon</option>
+            </select>
+        </mat-form-field>
+        <button mat-raised-button type="submit" class="test-buttons">TEST VALIDATION</button>
+    </form>
+</div>

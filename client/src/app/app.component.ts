@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { DisplayService } from './service/display/display.service';
+import { Title } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
 import { routes } from './app-routing.module';
+import { DisplayService } from './service/display/display.service';
 
 @Component({
     selector: 'app-root',
@@ -9,8 +11,10 @@ import { routes } from './app-routing.module';
 })
 export class AppComponent {
 
+    protected appTitle = 'Playwright & Microcks';
+
     /** @var navigation app-routing results translated into menu items */
-    public navigation: any[] = [];
+    protected navigation: any[] = [];
 
     /**
      * @param display DisplayService
@@ -18,8 +22,9 @@ export class AppComponent {
     constructor(public display: DisplayService) {
         routes.forEach((route: any) => {
             const path = route.path;
-            if (path) {
-                this.navigation.push({ routerLink: '/' + path, title: path.replaceAll('-', ' ') });
+            const title = route.title;
+            if (path && title) {
+                this.navigation.push({ routerLink: '/' + path, title: title });
             }
         });
     }

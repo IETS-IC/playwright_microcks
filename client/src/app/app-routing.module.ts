@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './component/home/home.component';
 import { CreditCardValidationComponent } from './component/credit-card-validation/credit-card-validation.component';
+import { HomeComponent } from './component/home/home.component';
 import { PostalCodeValidationComponent } from './component/postal-code-validation/postal-code-validation.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'credit-card', component: CreditCardValidationComponent },
-    { path: 'postal-code', component: PostalCodeValidationComponent },
-    { path: '', component: HomeComponent }
+    { path: 'hm', component: HomeComponent, title: 'Home' },
+    { path: 'crdt-crd', component: CreditCardValidationComponent, title: 'Credit Card' },
+    { path: 'pstl-cd', component: PostalCodeValidationComponent, title: 'Postal Code' },
+    { path: '', redirectTo: 'hm', pathMatch: 'full' },
+    { path: '**', redirectTo: 'hm', pathMatch: 'full' },
 ];
 
 @NgModule({

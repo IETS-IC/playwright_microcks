@@ -1,10 +1,15 @@
 <h2>CREDIT CARD VALIDATION PAGE</h2>
 
-<button (click)="pingService()">TEST GREETING</button>
-<br />
-<button (click)="requestRootInstructions()">TEST SERVICE ROOT</button>
-<br />
-<form [formGroup]="validationForm" (ngSubmit)="validateCreditCard()" autocomplete="off">
-    <input formControlName="ccn" autocorrect="off" autocomplete="off" autocapitalize="off" />
-    <button type="submit">TEST VALIDATION</button>
-</form>
+<div class="api-test-div">
+    <button mat-raised-button (click)="pingService()" class="test-buttons">TEST GREETING</button>
+    <button mat-raised-button (click)="requestRootInstructions()" class="test-buttons">TEST SERVICE ROOT</button>
+    <form [formGroup]="validationForm" (ngSubmit)="validateCreditCard()" autocomplete="off" class="credit-form">
+        <mat-form-field>
+            <mat-label>Credit Card</mat-label>
+            <input matInput formControlName="ccn" placeholder="Ex. 6011000990139424" autocorrect="off"
+                autocomplete="off" autocapitalize="off" class="credit-input" />
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" class="test-buttons">TEST VALIDATION</button>
+    </form>
+</div>

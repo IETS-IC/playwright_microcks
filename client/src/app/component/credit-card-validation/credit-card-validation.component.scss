@@ -1,0 +1,24 @@
+.api-test-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: auto;
+    min-width: 200px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.credit-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.credit-input {
+    min-width: 200px;
+}
+
+.test-buttons {
+    max-width: 192px;
+}

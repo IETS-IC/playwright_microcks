@@ -39,6 +39,17 @@ pipeline {
                     }
                 }
             }
+        },
+        stage('End-to-end Testing') {
+            parallel {
+                stage('Playwright testing') {
+                    steps {
+                        dir('./client') {
+                            sh 'npx playwright test'
+                        }
+                    }
+                }
+            }
         }
     }
 }
