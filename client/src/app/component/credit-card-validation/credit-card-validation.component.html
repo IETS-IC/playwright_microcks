@@ -1,0 +1,10 @@
+<h2>CREDIT CARD VALIDATION PAGE</h2>
+
+<button (click)="pingService()">TEST GREETING</button>
+<br />
+<button (click)="requestRootInstructions()">TEST SERVICE ROOT</button>
+<br />
+<form [formGroup]="validationForm" (ngSubmit)="validateCreditCard()" autocomplete="off">
+    <input formControlName="ccn" autocorrect="off" autocomplete="off" autocapitalize="off" />
+    <button type="submit">TEST VALIDATION</button>
+</form>

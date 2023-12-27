@@ -1,0 +1,13 @@
+<h2>POSTAL CODE VALIDATION</h2>
+
+<button (click)="pingService()">TEST GREETING</button>
+<br />
+<button (click)="requestRootInstructions()">TEST SERVICE ROOT</button>
+<br />
+<form [formGroup]="validationForm" (ngSubmit)="validatePostalCode()" autocomplete="off">
+    <div class="flex-column">
+        <input formControlName="postalCode" autocorrect="off" autocomplete="off" autocapitalize="off" />
+        <input formControlName="provinceCode" autocorrect="off" autocomplete="off" autocapitalize="off" />
+        <button type="submit">TEST VALIDATION</button>
+    </div>
+</form>

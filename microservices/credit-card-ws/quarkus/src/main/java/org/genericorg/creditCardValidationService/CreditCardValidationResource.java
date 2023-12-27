@@ -13,16 +13,16 @@ public class CreditCardValidationResource {
     @Inject GreetingService greetingService;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String greeting() {
-        return greetingService.greeting("Credit Card Validation");
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseMessage greeting() {
+        return new ResponseMessage(greetingService.greeting("Credit Card Validation"));
     }
 
     @GET
     @Path("/validation")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String validationGuidance() {
-        return "Please provide a credit card number as a URI param";
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseMessage validationGuidance() {
+        return new ResponseMessage("Please provide a credit card number as a URI param");
     }
 
     @GET

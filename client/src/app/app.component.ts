@@ -18,7 +18,9 @@ export class AppComponent {
     constructor(public display: DisplayService) {
         routes.forEach((route: any) => {
             const path = route.path;
-            this.navigation.push({ routerLink: '/' + path, title: path.replace('-', ' ') || 'Home' });
+            if (path) {
+                this.navigation.push({ routerLink: '/' + path, title: path.replaceAll('-', ' ') });
+            }
         });
     }
 }

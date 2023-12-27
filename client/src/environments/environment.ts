@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false
+    production: false,
+    creditCardBasePath: 'http://localhost:8091',
+    postalCardBasePath: 'http://localhost:8092'
 };
 
 /*

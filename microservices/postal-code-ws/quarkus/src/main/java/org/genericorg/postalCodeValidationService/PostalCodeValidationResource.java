@@ -13,23 +13,23 @@ public class PostalCodeValidationResource {
     @Inject GreetingService greetingService;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String greeting() {
-        return greetingService.greeting("Postal Code Validation");
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseMessage greeting() {
+        return new ResponseMessage(greetingService.greeting("Postal Code Validation"));
     }
 
     @GET
     @Path("/validation")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String validationRoot() {
-        return validationGuidance();
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseMessage validationRoot() {
+        return new ResponseMessage(validationGuidance());
     }
 
     @GET
     @Path("/validation/{postalCode}/")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String validationPostalOnly() {
-        return validationGuidance();
+    @Produces(MediaType.APPLICATION_JSON)
+    public ResponseMessage validationPostalOnly() {
+        return new ResponseMessage(validationGuidance());
     }
 
 
