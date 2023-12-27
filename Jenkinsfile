@@ -39,7 +39,7 @@ pipeline {
                     }
                 }
             }
-        },
+        }
         stage('End-to-end Testing') {
             parallel {
                 stage('Playwright testing') {
