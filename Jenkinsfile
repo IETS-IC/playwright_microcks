@@ -16,7 +16,7 @@ pipeline {
                                 if (isUnix()) {
                                     sh "npm run nuke-install:unix"
                                     sh "npx playwright install"
-                                    sh "npx playwright install-deps"
+                                    sh "yum install libdrm.so.2"
                                 } else {
                                     bat "npm run nuke-install:windows"
                                     bat "npx playwright install"
