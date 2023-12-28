@@ -14,7 +14,8 @@ pipeline {
                                     sh "npm run nuke-install:unix"
                                     sh "npx playwright install"
                                     sh "export CHROME_BIN=/var/lib/jenkins/.cache/ms-playwright/chromium-1091"
-                                    sh "printenv"
+                                    sh "echo \"Testing environment variable entries\""
+                                    sh "env"
                                 } else {
                                     bat "npm run nuke-install:windows"
                                     bat "npx playwright install"
