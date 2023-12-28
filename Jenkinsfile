@@ -26,7 +26,11 @@ pipeline {
                 stage('Frontend (Angular): Build') {
                     steps {
                         dir('./client') {
-                            bat "npx ng build"
+                            if (isUnix()) {
+                                sh "npx ng build"
+                            } else {
+                                bat "npx ng build"
+                            }
                         }
                     }
                 }
@@ -37,7 +41,11 @@ pipeline {
                 stage('Frontend (Angular): Unit Testing') {
                     steps {
                         dir('./client') {
-                            bat 'npx ng test'
+                            if (isUnix()) {
+                                sh "npx ng test"
+                            } else {
+                                bat "npx ng test"
+                            }
                         }
                     }
                 }
@@ -48,7 +56,11 @@ pipeline {
                 stage('Playwright testing') {
                     steps {
                         dir('./client') {
-                            sh 'npx playwright test'
+                            if (isUnix()) {
+                                sh "npx playwright test"
+                            } else {
+                                bat "npx playwright test"
+                            }
                         }
                     }
                 }
