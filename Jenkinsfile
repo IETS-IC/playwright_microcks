@@ -15,8 +15,8 @@ pipeline {
                             script {
                                 if (isUnix()) {
                                     sh "npm run nuke-install:unix"
-                                    sh "cat /etc/os-release"
-                                    sh "npx playwright install --with-deps"
+                                    sh "npx playwright install"
+                                    sh "npx playwright install-deps"
                                 } else {
                                     bat "npm run nuke-install:windows"
                                     bat "npx playwright install"
