@@ -12,8 +12,10 @@ pipeline {
                             script {
                                 if (isUnix()) {
                                     sh "npm run nuke-install:unix"
+                                    sh "npx playwright install"
                                 } else {
                                     bat "npm run nuke-install:windows"
+                                    bat "npx playwright install"
                                 }
                             }
                         }
