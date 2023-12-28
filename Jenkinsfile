@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091'
+        CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091/chrome-linux/chrome'
     }
     tools {
         nodejs "Node Default"
