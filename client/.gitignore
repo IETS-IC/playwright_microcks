@@ -1,5 +1,6 @@
 .angular/
 blob-report/
+dist/
 node_modules/
 playwright/.cache/
 playwright-report/

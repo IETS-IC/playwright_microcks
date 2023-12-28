@@ -26,7 +26,7 @@ pipeline {
                 stage('Frontend (Angular): Build') {
                     steps {
                         dir('./client') {
-                            bat "npm run build"
+                            bat "npx ng build"
                         }
                     }
                 }
@@ -37,7 +37,7 @@ pipeline {
                 stage('Frontend (Angular): Unit Testing') {
                     steps {
                         dir('./client') {
-                            bat 'npm test'
+                            bat 'npx ng test'
                         }
                     }
                 }
