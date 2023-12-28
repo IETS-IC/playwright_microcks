@@ -26,10 +26,12 @@ pipeline {
                 stage('Frontend (Angular): Build') {
                     steps {
                         dir('./client') {
-                            if (isUnix()) {
-                                sh "npx ng build"
-                            } else {
-                                bat "npx ng build"
+                            script {
+                                if (isUnix()) {
+                                    sh "npx ng build"
+                                } else {
+                                    bat "npx ng build"
+                                }
                             }
                         }
                     }
@@ -41,10 +43,12 @@ pipeline {
                 stage('Frontend (Angular): Unit Testing') {
                     steps {
                         dir('./client') {
-                            if (isUnix()) {
-                                sh "npx ng test"
-                            } else {
-                                bat "npx ng test"
+                            script {
+                                if (isUnix()) {
+                                    sh "npx ng test"
+                                } else {
+                                    bat "npx ng test"
+                                }
                             }
                         }
                     }
@@ -56,10 +60,12 @@ pipeline {
                 stage('Playwright testing') {
                     steps {
                         dir('./client') {
-                            if (isUnix()) {
-                                sh "npx playwright test"
-                            } else {
-                                bat "npx playwright test"
+                            script {
+                                if (isUnix()) {
+                                    sh "npx playwright test"
+                                } else {
+                                    bat "npx playwright test"
+                                }
                             }
                         }
                     }
