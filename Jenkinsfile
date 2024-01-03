@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        
-    }
     tools {
         git "Jenkins Git"
     }
