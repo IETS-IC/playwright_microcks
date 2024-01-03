@@ -3,9 +3,6 @@ pipeline {
     environment {
         CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091/chrome-linux/chrome'
     }
-    tools {
-        nodejs "Node Default"
-    }
     stages {
         stage('Installations') {
             parallel {
