@@ -3,6 +3,9 @@ pipeline {
     environment {
         CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091/chrome-linux/chrome'
     }
+    tools {
+        git "Jenkins Git"
+    }
     stages {
         stage('Installations') {
             parallel {
