@@ -73,7 +73,7 @@ export default defineConfig({
 
     /* Run your local dev server before starting the tests */
     webServer: {
-        command: 'npm start',
-        port: 4200
+        command: 'npm run start:jenkins',
+        port: 4201
     },
 });
