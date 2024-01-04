@@ -6,7 +6,7 @@ test('Testing menu', async ({ page }) => {
     await page.getByRole('button', { name: 'Credit Card' }).click();
     await page.getByLabel('Credit Card').click();
 
-    await expect(page).toHaveTitle('Credit Card | Playwright & Microcks');
+    await expect(page).toHaveTitle('Credit Card | Playwright & Microcksx');
 });
 
 /*

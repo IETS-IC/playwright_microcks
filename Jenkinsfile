@@ -67,7 +67,7 @@ pipeline {
                         dir('./client') {
                             script {
                                 if (isUnix()) {
-                                    sh "npx playwright test"
+                                    sh "npx playwright test -x"
                                 } else {
                                     bat "npx playwright test"
                                 }
