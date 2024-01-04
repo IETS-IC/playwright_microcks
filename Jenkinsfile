@@ -69,7 +69,7 @@ pipeline {
                                 if (isUnix()) {
                                     sh "npx playwright test -x"
                                 } else {
-                                    bat "npx playwright test"
+                                    bat "npx playwright test -x"
                                 }
                             }
                         }
