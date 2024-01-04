@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { routes } from './app-routing.module';
 import { DisplayService } from './service/display/display.service';
 
@@ -19,12 +19,16 @@ export class AppComponent {
     /**
      * @param display DisplayService
      */
-    constructor(public display: DisplayService) {
+    constructor(public display: DisplayService,
+        private titleService: Title,
+        private router: Router
+    ) {
         routes.forEach((route: any) => {
             const path = route.path;
             const title = route.title;
-            if (path && title) {
-                this.navigation.push({ routerLink: '/' + path, title: title });
+            const label = route.label;
+            if (path && label) {
+                this.navigation.push({ routerLink: '/' + path, title, label });
             }
         });
     }

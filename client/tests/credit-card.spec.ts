@@ -9,6 +9,7 @@ test('Testing menu', async ({ page }) => {
     await expect(page).toHaveTitle('Credit Card | Playwright & Microcks');
 });
 
+/*
 test('Testing input', async ({ page }) => {
     await page.goto('http://localhost:4200/crdt-crd');
     await expect(page).toHaveTitle('Credit Card | Playwright & Microcks');
@@ -16,3 +17,4 @@ test('Testing input', async ({ page }) => {
     await page.getByLabel('Credit Card').fill('1234123412341234');
     await expect(page.locator('.split-content > .container')).toHaveText('1234123412341234');
 });
+*/

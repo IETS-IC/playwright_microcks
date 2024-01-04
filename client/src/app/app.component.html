@@ -2,8 +2,8 @@
     <mat-sidenav #drawer mode="side" position="end">
         <!-- Navigation menu -->
         <ng-container *ngFor="let nav of navigation">
-            <button mat-button class="menu-button" [routerLink]="nav.routerLink">
-                <span>{{nav.title}}</span>
+            <button mat-button [routerLink]="nav.routerLink" class="menu-button">
+                <span>{{nav.label}}</span>
             </button>
             <mat-divider></mat-divider>
         </ng-container>

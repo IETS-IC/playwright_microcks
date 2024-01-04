@@ -26,6 +26,12 @@ module.exports = function (config) {
                 { type: 'text-summary' }
             ]
         },
+        customLaunchers: {
+            ChromeHeadlessNoGPU: {
+                base: 'ChromiumHeadless',
+                flags: ['--no-sandbox']
+            }
+        },
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         jasmineHtmlReporter: {
             suppressAll: true // removes the duplicated traces

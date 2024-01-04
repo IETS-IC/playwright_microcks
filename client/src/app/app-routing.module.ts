@@ -4,10 +4,13 @@ import { CreditCardValidationComponent } from './component/credit-card-validatio
 import { HomeComponent } from './component/home/home.component';
 import { PostalCodeValidationComponent } from './component/postal-code-validation/postal-code-validation.component';
 
-export const routes: Routes = [
-    { path: 'hm', component: HomeComponent, title: 'Home' },
-    { path: 'crdt-crd', component: CreditCardValidationComponent, title: 'Credit Card' },
-    { path: 'pstl-cd', component: PostalCodeValidationComponent, title: 'Postal Code' },
+
+const appTitle = 'Playwright & Microcks';
+
+export const routes: any = [
+    { path: 'hm', component: HomeComponent, title: `Home | ${appTitle}`, label: 'Home' },
+    { path: 'crdt-crd', component: CreditCardValidationComponent, title: `Credit Card | ${appTitle}`, label: 'Credit Card' },
+    { path: 'pstl-cd', component: PostalCodeValidationComponent, title: `Postal Code | ${appTitle}`, label: 'Postal Code' },
     { path: '', redirectTo: 'hm', pathMatch: 'full' },
     { path: '**', redirectTo: 'hm', pathMatch: 'full' },
 ];

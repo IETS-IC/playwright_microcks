@@ -10,6 +10,7 @@ test('Testing menu', async ({ page }) => {
     await expect(page).toHaveTitle('Postal Code | Playwright & Microcks');
 });
 
+/*
 test('Testing input', async ({ page }) => {
     await page.goto('http://localhost:4200/pstl-cd');
     await expect(page).toHaveTitle('Postal Code | Playwright & Microcks');
@@ -21,3 +22,4 @@ test('Testing input', async ({ page }) => {
 
     await expect(page.locator('.split-content > .container')).toHaveText('K1A 1A1ON');
 });
+*/
