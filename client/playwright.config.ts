@@ -74,7 +74,7 @@ export default defineConfig({
     /* Run your local dev server before starting the tests */
     webServer: {
         command: 'npm run start:jenkins',
-        port: 4201,
+        port: 4200,
         timeout: 600 * 1000,
         reuseExistingServer: false
     },

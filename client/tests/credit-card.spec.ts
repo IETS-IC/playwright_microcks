@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Testing menu', async ({ page }) => {
-    await page.goto('http://localhost:4201/');
+    await page.goto('http://localhost:4200/');
     await page.getByLabel('Click to open menu').click();
     await page.getByRole('button', { name: 'Credit Card' }).click();
     await page.getByLabel('Credit Card').click();
