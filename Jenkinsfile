@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091/chrome-linux/chrome'
+        PLAYWRIGHT_FLAG_CI = 'true'
     }
     tools {
         git "Jenkins Git"
