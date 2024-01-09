@@ -5,7 +5,7 @@ module.exports = function (config) {
     config.set({
         autoWatch: true,
         basePath: '',
-        browsers: ['ChromeHeadlessNoGPU', 'EdgeNoSandbox'],
+        browsers: ['ChromeHeadlessNoGPU'],
         captureTimeout: 60000,
         client: {
             captureConsole: true,
@@ -30,10 +30,6 @@ module.exports = function (config) {
             ChromeHeadlessNoGPU: {
                 base: 'ChromeHeadless',
                 flags: ['--no-sandbox']
-            },
-            EdgeNoSandbox: {
-                base: 'Edge',
-                flags: ['--no-sandbox']
             }
         },
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -44,7 +40,6 @@ module.exports = function (config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
-            require('karma-edge-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage'),
             require('@angular-devkit/build-angular/plugins/karma')
