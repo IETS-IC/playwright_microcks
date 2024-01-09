@@ -5,7 +5,7 @@ module.exports = function (config) {
     config.set({
         autoWatch: true,
         basePath: '',
-        browsers: ['ChromeHeadlessNoGPU'],
+        browsers: ['ChromeHeadlessNoGPU', 'firefox'],
         captureTimeout: 60000,
         client: {
             captureConsole: true,
