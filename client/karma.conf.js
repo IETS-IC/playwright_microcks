@@ -5,7 +5,7 @@ module.exports = function (config) {
     config.set({
         autoWatch: true,
         basePath: '',
-        browsers: ['ChromeHeadlessNoGPU', 'firefox'],
+        browsers: ['ChromeHeadlessNoGPU', 'Firefox'],
         captureTimeout: 60000,
         client: {
             captureConsole: true,
@@ -40,6 +40,7 @@ module.exports = function (config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
+            require('karma-firefox-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage'),
             require('@angular-devkit/build-angular/plugins/karma')
