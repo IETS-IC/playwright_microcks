@@ -36,7 +36,10 @@ export default defineConfig({
             name: 'chromium',
             use: {
                 ...devices['Desktop Chrome'],
-                launchOptions: { args: ['--disable-gpu'] }
+                launchOptions: {
+                    args: ['--disable-gpu', '--no-sandbox'],
+                    executablePath: '/usr/bin/google-chrome'
+                }
             },
         },
 
