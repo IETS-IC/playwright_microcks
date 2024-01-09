@@ -33,7 +33,7 @@ export default defineConfig({
     /* Configure projects for major browsers */
     projects: [
         {
-            name: 'chromium',
+            name: 'Google Chrome',
             use: {
                 ...devices['Desktop Chrome'],
                 launchOptions: {
@@ -44,11 +44,11 @@ export default defineConfig({
         },
 
         {
-            name: 'firefox',
+            name: 'Microsoft Edge',
             use: {
-                ...devices['Desktop Firefox'],
+                ...devices['Desktop Edge'],
                 launchOptions: {
-                    executablePath: '/usr/bin/firefox'
+                    executablePath: '/usr/bin/microsoft-edge'
                 }
             },
         },
