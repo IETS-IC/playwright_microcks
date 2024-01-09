@@ -5,7 +5,7 @@ module.exports = function (config) {
     config.set({
         autoWatch: true,
         basePath: '',
-        browsers: ['ChromeHeadlessNoGPU', 'Edge'],
+        browsers: ['ChromeHeadlessNoGPU', 'EdgeNoSandbox'],
         captureTimeout: 60000,
         client: {
             captureConsole: true,
@@ -29,6 +29,10 @@ module.exports = function (config) {
         customLaunchers: {
             ChromeHeadlessNoGPU: {
                 base: 'ChromeHeadless',
+                flags: ['--no-sandbox']
+            },
+            EdgeNoSandbox: {
+                base: 'Edge',
                 flags: ['--no-sandbox']
             }
         },
