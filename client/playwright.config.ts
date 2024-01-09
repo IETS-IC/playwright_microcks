@@ -45,7 +45,12 @@ export default defineConfig({
 
         {
             name: 'firefox',
-            use: { ...devices['Desktop Firefox'] },
+            use: {
+                ...devices['Desktop Firefox'],
+                launchOptions: {
+                    executablePath: '/usr/bin/firefox'
+                }
+            },
         },
 
         {
