@@ -9,7 +9,6 @@ export const routes: Routes = [
     { path: 'crdt-crd', component: CreditCardValidationComponent, title: 'Credit Card' },
     { path: 'pstl-cd', component: PostalCodeValidationComponent, title: 'Postal Code' },
     { path: '', redirectTo: 'hm', pathMatch: 'full' },
-    { path: '**', redirectTo: 'hm', pathMatch: 'full' },
 ];
 
 @NgModule({
