@@ -5,10 +5,9 @@ import { HomeComponent } from './component/home/home.component';
 import { PostalCodeValidationComponent } from './component/postal-code-validation/postal-code-validation.component';
 
 export const routes: Routes = [
-    { path: 'hm', component: HomeComponent, title: 'Home' },
+    { path: '', component: HomeComponent, title: 'Home' },
     { path: 'crdt-crd', component: CreditCardValidationComponent, title: 'Credit Card' },
     { path: 'pstl-cd', component: PostalCodeValidationComponent, title: 'Postal Code' },
-    { path: '', redirectTo: 'hm', pathMatch: 'full' },
 ];
 
 @NgModule({
