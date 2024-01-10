@@ -24,7 +24,7 @@ export class AppComponent {
         routes.forEach((route: any) => {
             const path = route.path;
             const title = route.title;
-            if (path && title) {
+            if (title) {
                 this.navigation.push({ routerLink: '/' + path, title: title });
             }
         });
