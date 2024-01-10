@@ -11,7 +11,8 @@ import { DisplayService } from './service/display/display.service';
 })
 export class AppComponent {
 
-    protected appTitle = 'Playwright & Microcks';
+    static appTitle = 'Playwright & Microcks';
+    protected AppComponent = AppComponent;
 
     /** @var navigation app-routing results translated into menu items */
     protected navigation: any[] = [];
@@ -27,5 +28,9 @@ export class AppComponent {
                 this.navigation.push({ routerLink: '/' + path, title: title });
             }
         });
+    }
+
+    static title(): string {
+        return AppComponent.appTitle;
     }
 }
