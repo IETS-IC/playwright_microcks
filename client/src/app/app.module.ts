@@ -8,13 +8,15 @@ import { CreditCardValidationComponent } from './component/credit-card-validatio
 import { HomeComponent } from './component/home/home.component';
 import { PostalCodeValidationComponent } from './component/postal-code-validation/postal-code-validation.component';
 import { MaterialModule } from './setting/material.module';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CreditCardValidationComponent,
         HomeComponent,
-        PostalCodeValidationComponent
+        PostalCodeValidationComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
