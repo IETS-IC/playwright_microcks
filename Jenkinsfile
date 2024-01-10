@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        CHROME_BIN = '/var/lib/jenkins/.cache/ms-playwright/chromium-1091/chrome-linux/chrome'
+        CHROME_BIN = '/playwright/google-chrome-stable'
         PLAYWRIGHT_FLAG_CI = 'true'
     }
     tools {
@@ -16,7 +16,6 @@ pipeline {
                             script {
                                 if (isUnix()) {
                                     sh "npm run nuke-install:unix"
-                                    sh "npx playwright install"
                                 } else {
                                     bat "npm run nuke-install:windows"
                                     bat "npx playwright install"

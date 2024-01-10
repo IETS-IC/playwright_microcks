@@ -38,7 +38,7 @@ export default defineConfig({
                 ...devices['Desktop Chrome'],
                 launchOptions: {
                     args: ['--disable-gpu', '--no-sandbox'],
-                    executablePath: '/usr/bin/google-chrome'
+                    executablePath: '/playwright/google-chrome-stable'
                 }
             },
         },
@@ -48,7 +48,7 @@ export default defineConfig({
             use: {
                 ...devices['Desktop Edge'],
                 launchOptions: {
-                    executablePath: '/usr/bin/microsoft-edge'
+                    executablePath: '/playwright/microsoft-edge-stable'
                 }
             },
         },
