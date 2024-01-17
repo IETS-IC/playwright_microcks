@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'playwright'
+        }
+    }
     environment {
         CHROME_BIN = '/playwright/google-chrome-stable'
         PLAYWRIGHT_FLAG_CI = 'true'
