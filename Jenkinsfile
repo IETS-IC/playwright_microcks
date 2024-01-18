@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'playwright'
+            label 'template1'
         }
     }
     environment {
