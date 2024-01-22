@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'maven'
+        label 'nodejs'
     }
     environment {
         CHROME_BIN = '/playwright/google-chrome-stable'
