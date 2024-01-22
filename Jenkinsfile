@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'template1'
+        label 'playwright'
     }
     environment {
         CHROME_BIN = '/playwright/google-chrome-stable'
