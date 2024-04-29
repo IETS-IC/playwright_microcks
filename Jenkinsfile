@@ -7,7 +7,7 @@ pipeline {
         PLAYWRIGHT_FLAG_CI = 'true'
     }
     tools {
-        git "Jenkins Git"
+        git "Default"
     }
     stages {
         stage('Installations') {
