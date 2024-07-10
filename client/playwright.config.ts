@@ -38,20 +38,20 @@ export default defineConfig({
                 ...devices['Desktop Chrome'],
                 launchOptions: {
                     args: ['--disable-gpu', '--no-sandbox'],
-                    executablePath: '/playwright/google-chrome-stable'
+                    executablePath: '/opt/google/chrome/google-chrome'
                 }
             },
         },
 
-        {
-            name: 'Microsoft Edge',
-            use: {
-                ...devices['Desktop Edge'],
-                launchOptions: {
-                    executablePath: '/playwright/microsoft-edge-stable'
-                }
-            },
-        },
+        // {
+        //     name: 'Microsoft Edge',
+        //     use: {
+        //         ...devices['Desktop Edge'],
+        //         launchOptions: {
+        //             executablePath: '/playwright/microsoft-edge-stable'
+        //         }
+        //     },
+        // },
 
         /* Test against mobile viewports. */
         // {
