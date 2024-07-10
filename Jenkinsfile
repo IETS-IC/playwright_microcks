@@ -3,7 +3,7 @@ pipeline {
         label 'playwright'
     }
     environment {
-        CHROME_BIN = '/playwright/google-chrome-stable'
+        CHROME_BIN = '/opt/google/chrome/google-chrome'
         PLAYWRIGHT_FLAG_CI = 'true'
     }
     tools {
