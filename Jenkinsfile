@@ -30,12 +30,14 @@ pipeline {
             parallel {
                 stage('Frontend (Angular): Build') {
                     steps {
-                        dir('./client') {
-                            script {
-                                if (isUnix()) {
-                                    sh "npx ng build"
-                                } else {
-                                    bat "npx ng build"
+                        container('chrome-sidecar') {
+                            dir('./client') {
+                                script {
+                                    if (isUnix()) {
+                                        sh "npx ng build"
+                                    } else {
+                                        bat "npx ng build"
+                                    }
                                 }
                             }
                         }
@@ -47,12 +49,14 @@ pipeline {
             parallel {
                 stage('Frontend (Angular): Unit Testing') {
                     steps {
-                        dir('./client') {
-                            script {
-                                if (isUnix()) {
-                                    sh "npx ng test"
-                                } else {
-                                    bat "npx ng test"
+                        container('chrome-sidecar') {
+                            dir('./client') {
+                                script {
+                                    if (isUnix()) {
+                                        sh "npx ng test"
+                                    } else {
+                                        bat "npx ng test"
+                                    }
                                 }
                             }
                         }
@@ -64,12 +68,14 @@ pipeline {
             parallel {
                 stage('Playwright testing') {
                     steps {
-                        dir('./client') {
-                            script {
-                                if (isUnix()) {
-                                    sh "npx playwright test -x"
-                                } else {
-                                    bat "npx playwright test -x"
+                        container('chrome-sidecar') {
+                            dir('./client') {
+                                script {
+                                    if (isUnix()) {
+                                        sh "npx playwright test -x"
+                                    } else {
+                                        bat "npx playwright test -x"
+                                    }
                                 }
                             }
                         }
