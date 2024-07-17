@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'playwright'
+        label 'playwright-pod'
     }
     environment {
         PLAYWRIGHT_FLAG_CI = 'true'
