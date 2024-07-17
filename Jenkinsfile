@@ -10,13 +10,15 @@ pipeline {
             parallel {
                 stage('Frontend (Angular): Install npm packages') {
                     steps {
-                        dir('./client') {
-                            script {
-                                if (isUnix()) {
-                                    sh "npm run nuke-install:unix"
-                                } else {
-                                    bat "npm run nuke-install:windows"
-                                    bat "npx playwright install"
+                        container('chrome-sidecar') {
+                            dir('./client') {
+                                script {
+                                    if (isUnix()) {
+                                        sh "npm run nuke-install:unix"
+                                    } else {
+                                        bat "npm run nuke-install:windows"
+                                        bat "npx playwright install"
+                                    }
                                 }
                             }
                         }
