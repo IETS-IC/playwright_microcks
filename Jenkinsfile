@@ -5,9 +5,6 @@ pipeline {
     environment {
         PLAYWRIGHT_FLAG_CI = 'true'
     }
-    tools {
-        git "Jenkins Git"
-    }
     stages {
         stage('Installations') {
             parallel {
