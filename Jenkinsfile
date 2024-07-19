@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'playwright'
+        label 'chrome-sidecar-exp'
     }
     environment {
         PLAYWRIGHT_FLAG_CI = 'true'

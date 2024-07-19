@@ -13,8 +13,8 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "nuke-install:windows": "(if exist node_modules rmdir /s /q node_modules) && (if exist package-lock.json del package-lock.json) && npm install --no-progress --ignore-scripts",
-        "nuke-install:unix": "([ -d node_modules ] && rm -r node_modules || true) && ([ -f package-lock.json ] && rm package-lock.json || true) && npm install --no-progress --ignore-scripts"
+        "nuke-install:windows": "(if exist node_modules rmdir /s /q node_modules) && (if exist package-lock.json del package-lock.json) && npm install --no-progress --ignore-scripts --loglevel verbose",
+        "nuke-install:unix": "([ -d node_modules ] && rm -r node_modules || true) && ([ -f package-lock.json ] && rm package-lock.json || true) && npm install --no-progress --ignore-scripts --loglevel verbose"
     },
     "dependencies": {
         "@angular-devkit/build-angular": "16.2.10",
